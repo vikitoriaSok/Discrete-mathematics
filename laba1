@@ -34,3 +34,30 @@ print(f"Результат: {результат}")
 
 
 //ЗАДАНИЕ 4
+
+import math
+def to_km(shir1, dolg1, shir2, dolg2):
+    R = int(input("Радиус: "))
+    shir1 = math.radians(shir1)
+    dolg1 = math.radians(dolg1)
+    shir2 = math.radians(shir2)
+    dolg2 = math.radians(dolg2)
+
+    dshir = shir2 - shir1
+    ddolg = dolg2 - dolg1
+
+    a = math.sin(dshir/2)**2 + math.cos(shir1) * math.cos(shir2) * math.sin(ddolg/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distance = R * c
+    return distance
+
+print("Введите координаты первой точки")
+shir1 = float(input("Широта (в градусах): "))
+dolg1 = float(input("Долгота (в градусах): "))
+print("Введите координаты второй точки")
+shir2 = float(input("Широта (в градусах): "))
+dolg2 = float(input("Долгота (в градусах): "))
+
+distance = to_km(shir1, dolg1, shir2, dolg2)
+print(f"Расстояние между точками: {distance:.2f} км")
+
