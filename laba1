@@ -60,4 +60,3 @@ dolg2 = float(input("Долгота (в градусах): "))
 
 distance = to_km(shir1, dolg1, shir2, dolg2)
 print(f"Расстояние между точками: {distance:.2f} км")
-
