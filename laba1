@@ -4,10 +4,6 @@ name = input("Введите имя: ")
 room = input("Введите номер аудитории: ") 
 print(f"{name} находится в ВВГУ аудитория № {room}
 
-
-
-
-
 //ЗАДАНИЕ 2
 
 A = int(input("Введите время открытия магазина (A): "))
@@ -15,17 +11,10 @@ B = int(input("Введите время закрытия магазина (B): 
 C = int(input("Введите время начала сиесты (C): "))
 D = int(input("Введите время окончания сиесты (D): "))
 X = int(input("Введите время прихода Васи (X): "))
-
-
 if A <= X < B and (X < C or X >= D):
     print("Магазин открыт")
 else:
     print("Магазин закрыт")
-
-
-
-
-
 
 //ЗАДАНИЕ 3
 
@@ -33,8 +22,6 @@ else:
 степень = float(input("Введите степень: "))
 результат = число ** степень
 print(f"Результат: {результат}")
-
-
 
 //ЗАДАНИЕ 4
 
@@ -45,10 +32,8 @@ def to_km(shir1, dolg1, shir2, dolg2):
     dolg1 = math.radians(dolg1)
     shir2 = math.radians(shir2)
     dolg2 = math.radians(dolg2)
-
     dshir = shir2 - shir1
     ddolg = dolg2 - dolg1
-
     a = math.sin(dshir/2)**2 + math.cos(shir1) * math.cos(shir2) * math.sin(ddolg/2)**2
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     distance = R * c
