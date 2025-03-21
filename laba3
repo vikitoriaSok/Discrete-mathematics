@@ -1,3 +1,5 @@
+//ЗАДАНИЕ 1
+
 from itertools import product
 
 def logical_and(a, b):
